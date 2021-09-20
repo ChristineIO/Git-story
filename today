@@ -1,0 +1,12 @@
+function clicked() {
+    document.querySelectorAll('.calc-btn').forEach(item => {
+        item.addEventListener('click', event => {
+            var clickedMent = event.target;
+            clickedMent.classList.add('pressed');
+            setTimeout(() => {
+                clickedMent.classList.remove('pressed');
+            }, 125);
+        })
+    })
+}
+clicked();
